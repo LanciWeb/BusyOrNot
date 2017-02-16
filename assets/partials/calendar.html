@@ -1,0 +1,28 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-xs-12 text-center top-space" id="view-button-container">
+			<button data-ng-hide="calendar_v" data-ng-click="viewToggle()" class="btn btn-default"><i class="fa fa-calendar"></i>  Passa a visualizzazione Calendario</button>
+			<button data-ng-show="calendar_v" data-ng-click="viewToggle()" class="btn btn-default"><i class="fa fa-list"></i> Passa a visualizzazione Lista</button>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12 text-center">
+			<div id="calendar-container">
+				<div id="calendar-header">
+					<div class="row">
+						<div class="col-xs-2">
+							<span class="fa fa-arrow-circle-left clickable" data-ng-click="browse_calendar('back')"></span>
+						</div>
+						<div class="col-xs-8">
+							<span id="calendar-month-year"></span>
+						</div>
+						<div class="col-xs-2">
+							<span class="fa fa-arrow-circle-right clickable" data-ng-click="browse_calendar('forward')"></span>
+						</div>
+					</div>		
+				</div>
+				<div id="calendar-dates"></div>
+			</div>
+		</div>
+	</div>
+</div>

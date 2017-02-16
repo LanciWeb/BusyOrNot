@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="it" data-ng-app="calendarApp" data-ng-controller="mainCtrl">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="author" content="Marco Lancellotti" />
+		<meta name="description" content="Esercizio Commit" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Busy or Not</title>
+		<link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Blue_calendar_icon_with_dates_crossed_out.svg/1000px-Blue_calendar_icon_with_dates_crossed_out.svg.png" />
+		<link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="bower_components/angular-motion/dist/angular-motion.min.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+	</head>
+	<body>
+		<header>
+			<nav class="navbar-inverse">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<a href="#/" class="navbar-brand"><span class="glyphicon glyphicon-calendar"></span> Busy or Not</a>
+						<button type="button" class="navbar-toggle" data-target="#menu" data-toggle="collapse">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+					<div class="collapse navbar-collapse" id="menu">
+						<ul class="nav navbar-nav navbar-right">
+							<li data-ng-class="active_class('/')"><a href="#/"><i class="fa fa-calendar"></i>  Visualizza Calendario</a></li>
+							<li data-ng-class="active_class('/add')"><a href="#/add"><i class="fa fa-calendar-plus-o"></i>  Aggiungi Indisponibilit&agrave;</a></li>
+							<li data-ng-class="active_class('/remove')"><a href="#/remove"><i class="fa fa-calendar-minus-o"></i>  Rimuovi Indisponibilit&agrave;</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<ng-view></ng-view>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-animate.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-strap/2.3.12/angular-strap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-strap/2.3.12/angular-strap.tpl.js"></script>
+		<script src="assets/scripts/modules.js"></script>
+		<script src="assets/scripts/controllers.js"></script>
+		<script src="assets/scripts/routing.js"></script>
+	</body>
+</html>

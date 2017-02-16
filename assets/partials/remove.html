@@ -1,0 +1,29 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-xs-12">
+			<header class="page-header text-center">
+				<h3>Date contrassegnate come indisponibili</h3>
+			</header>
+			<div id="container"></div>
+			<table class="table table-responsive table-bordered table-striped table-hover table-condensed" id="removeTable">
+				<thead>
+					<tr>
+						<th>Data</th>
+						<th>Azioni</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr data-ng-repeat="d in dates">
+						<td><b>{{d.day}}-{{d.month}}-{{d.year}}</b></td>
+						<td> 
+							<form name="form{{d.id}}">
+								<input type="password" placeholder="Password"  data-ng-model="psw_ins[$index]" name="password">
+								<button type="button" class="btn btn-danger btn-xs" data-ng-click="elimina($index)">RITORNA DISPONIBILE</button>
+							</form>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>	
